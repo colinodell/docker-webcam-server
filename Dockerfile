@@ -7,7 +7,7 @@ EXPOSE 8081
 
 ADD ./conf/motion.conf /etc/motion/motion.conf
 
-VOLUME /dev/video0
+VOLUME /var/motion
 
 CMD ["motion"]
 
