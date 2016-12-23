@@ -1,9 +1,9 @@
-FROM ubuntu:14.10
-MAINTAINER John Ahlroos
+FROM ubuntu:16.04
+MAINTAINER Colin O'Dell
 
 RUN apt-get update && apt-get install motion -y
 
-EXPOSE 8081
+EXPOSE 9999
 
 ADD ./conf/motion.conf /etc/motion/motion.conf
 
