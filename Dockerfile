@@ -1,7 +1,9 @@
 FROM ubuntu:16.04
 MAINTAINER Colin O'Dell
 
-RUN apt-get update && apt-get install motion -y
+RUN apt-get update && apt-get install motion -y && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/man/?? /usr/share/man/??_*
 
 EXPOSE 9999
 
